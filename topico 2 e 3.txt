@@ -1,0 +1,7 @@
+2. Executar o exemplo RPC e observar a comunicação.
+
+Observação da Comunicação: O cliente enviou uma requisição ao servidor para executar o procedimento soma(10, 9). O servidor executou a função localmente e enviou o valor de retorno (19) de volta ao cliente. O protocolo XML-RPC empacota a chamada de função e os parâmetros em formato XML para a comunicação, e desempacota a resposta de forma transparente para o desenvolvedor.
+
+3. Discutir diferenças entre RPC e REST API.
+
+A principal distinção entre RPC e REST API está no modelo de interação: a RPC é focada em Ações e Funções, enquanto a REST é focada em Recursos e Objetos. No RPC, você chama um procedimento específico no servidor, como se estivesse dando uma ordem direta. Na prática, isso geralmente significa usar o método HTTP POST para todas as ações, já que o nome da função é o que realmente importa. Já na REST, você interage com um recurso em um endereço, utilizando verbos HTTP padronizados para descrever a ação que deseja realizar sobre esse recurso. Essa abordagem torna a REST menos acoplada, pois você interage com os objetos de forma uniforme, diferente da RPC, onde o cliente fica mais "grudado" aos detalhes da implementação da função no servidor.
